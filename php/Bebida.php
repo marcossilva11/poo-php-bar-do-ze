@@ -25,8 +25,8 @@ class Bebida{
     public function getBebida(){
         return $this->bebida;
     }
-    public function setBebida($b){
-        $this->bebida = $b;
+    public function setBebida($beb){
+        $this->bebida = $beb;
     }
 
     // relativo a promoção
