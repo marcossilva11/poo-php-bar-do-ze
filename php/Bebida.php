@@ -3,6 +3,7 @@ class Bebida{
     private $nome;
     private $preco; 
     private $bebida;
+    private $promo;
 
     //Relativo ao nome
     public function getNome(){
@@ -28,8 +29,13 @@ class Bebida{
         $this->bebida = $b;
     }
 
-    public function getPromo(){
+    // relativo a promoção
 
+    public function getPromo(){
+        return $this->promo;
+    }
+    public function setPromo($p){
+        $this->promo = $p;
     }
 
     public function VerificarPreco(){
@@ -42,9 +48,21 @@ class Bebida{
 
     public function MostrarBebida(){
         if($this->getBebida() == "Vinho"){
-            echo "<p> Nome: ".$this->getNome()."<P>";
-            echo "<p> Preço: ".$this->getPreco()."<P>";
-            echo "<p>".$this->getPromo()."<P>";
+            echo "<p>Nome: ".$this->getNome()."</p>";
+            echo "<p>Preço: ".$this->getPreco()."</p>";
+            echo "<p>Promoção: ".$this->getPromo()."</p>";
+            echo "<p>Safra: ".$this->getSafra()."</p>";
+            echo "<p>Tipo: ".$this->getTipo()."</p>";
+        }elseif($this->getBebida() == "Suco"){
+            echo "<p>Nome: ".$this->getNome()."</p>";
+            echo "<p>Preço: ".$this->getPreco()."</p>";
+            echo "<p>Promoção: ".$this->getPromo()."</p>";
+            echo "<p>Sabor: ".$this->getSabor()."</p>";
+        }elseif($this->getBebida() == "Refrigerante"){
+            echo "<p>Nome: ".$this->getNome()."</p>";
+            echo "<p>Preço: ".$this->getPreco()."</p>";
+            echo "<p>Promoção: ".$this->getPromo()."</p>";
+            echo "<p>Retornável: ".$this->getRetornavel()."</p>";
         }
     }
 

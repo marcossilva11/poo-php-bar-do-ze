@@ -1,4 +1,5 @@
 <?php
+require_once 'Bebida.php';
 class Vinho extends Bebida{
 
     private $safra;
@@ -12,12 +13,13 @@ class Vinho extends Bebida{
         $this->safra = $s;
     }
 
-    //Relativo ao tipo
-    public function getSafra(){
+    // relativo ao tipo
+    public function getTipo(){
         return $this->tipo;
     }
-    public function setSafra($t){
+    public function setTipo($t){
         $this->tipo = $t;
     }
+
 }
 ?>
