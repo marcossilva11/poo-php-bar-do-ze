@@ -8,7 +8,7 @@ class Refri extends Bebida{
     }
 
     public function setRetornavel($retornavel) {
-        $this->retornavel = $retornavel;
+        $this->retornavel = !$retornavel;
     }
 }
 ?>
