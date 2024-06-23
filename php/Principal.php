@@ -28,7 +28,6 @@
         $v->setPromo($_POST['promo']);
         $v->setSafra($_POST['safra']);
         $v->setTipo($_POST['tipo']);
-
         $v->MostrarBebida();
     } elseif ($_POST["bebida"] == "Suco") {
         $s->setBebida($_POST['bebida']);
@@ -36,16 +35,20 @@
         $s->setPreco($_POST['preco']);
         $s->setPromo($_POST['promo']);
         $s->setSabor($_POST['sabor']);
-
         $s->MostrarBebida();
+        if($_POST['preco'] < 25){
+            $v->setPromo[true];
+        }
     } elseif ($_POST["bebida"] == "Refri") {
         $s->setBebida($_POST['bebida']);
         $s->setNome($_POST['nome']);
         $s->setPreco($_POST['preco']);
         $s->setPromo($_POST['promo']);
         $r->setRetornavel(isset($_POST['retornavel']));
-
         $r->MostrarBebida();
+        if($_POST['preco'] < 2.5){
+            $v->setPromo[true];
+        }
     }
 
     ?>
