@@ -9,8 +9,8 @@ class Vinho extends Bebida{
     public function getSafra(){
         return $this->safra;
     }
-    public function setSafra($s){
-        $this->safra = $s;
+    public function setSafra($saf){
+        $this->safra = $saf;
     }
 
     // relativo ao tipo
@@ -20,6 +20,5 @@ class Vinho extends Bebida{
     public function setTipo($t){
         $this->tipo = $t;
     }
-
 }
 ?>
