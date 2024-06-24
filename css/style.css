@@ -91,11 +91,11 @@ header {
   margin: 10px 0;
 }
 
-.container-main .form-input .selecao-bebidas .input-box {
+.container-main .form-input .selecao-bebidas .input-box, .container-main .form-input .selecao-bebidas .input-box-especializacao {
   margin: 10px 0;
 }
 
-.container-main .form-input .selecao-bebidas .input-box input {
+.container-main .form-input .selecao-bebidas .input-box input, .container-main .form-input .selecao-bebidas .input-box-especializacao input {
   display: none;
 }
 

@@ -25,10 +25,13 @@
         $v->setBebida($_POST['bebida']);
         $v->setNome($_POST['nome']);
         $v->setPreco($_POST['preco']);
-        $v->setPromo($_POST['promo']);
+        $s->setPromo($_POST['promo']);
         $v->setSafra($_POST['safra']);
         $v->setTipo($_POST['tipo']);
         $v->MostrarBebida();
+        if($_POST['preco'] < 25){
+            $v->setPromo[true];
+        }
     } elseif ($_POST["bebida"] == "Suco") {
         $s->setBebida($_POST['bebida']);
         $s->setNome($_POST['nome']);

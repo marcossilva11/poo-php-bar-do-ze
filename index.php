@@ -41,25 +41,30 @@
             <div class="cadastro-bebidas">
                 <form action="php/Principal.php" method="post">
                     <h2>Insira os dados necessários</h2>
-                    <p><input type="hidden" name="pessoa" value=""></p>
+                    <p><input type="hidden" name="bebida" value=""></p>
                     <div class="input-box">
                         <label for="nome">Nome da bebida: </label>
                         <input type="text" name="nome" id="nome">
                     </div>
                     <div class="input-box">
                         <label for="preco">Preço da bebida: </label>
-                        <input type="text" name="preco" id="preco">
+                        <input type="number" name="preco" id="preco">
                     </div>
                     <!--Especialização -->
-                    <p id="t1"></p>
-                    <p><input type="text" name=""></p>
-                    <p id="t2"></p>
-                    <p><input type="text" name=""></p>
+                    <div class="input-box-especializacao">
+                        <label id="t1"></label>
+                        <input type="text" name="" id="espec-1">
+                    </div>
+                    <div class="input-box-especializacao">
+                        <label id="t2"></label>
+                        <input type="text" name="" id="espec-2">
+                    </div>
 
                     <div id="emp">
                         <p>Está Empregado?</p>
-                        <p><input type="radio" name="empre" value="Sim">Sim
-                            <input type="radio" name="empre" value="Não">Não
+                        <p>
+                            <input type="radio" name="empre" value="Sim" id="sim"><label for="sim">Sim</label>
+                            <input type="radio" name="empre" value="Não" id="nao"><label for="nao">Não</label>
                         </p>
                     </div>
                     <input type="submit" name="botao" value="Cadastrar">
@@ -77,11 +82,13 @@
         var t1 = document.querySelector("#t1");
         var t2 = document.querySelector("#t2");
         document.querySelector("#emp").hidden = true;
+        document.querySelector("#espec-1").hidden = true;
+        document.querySelector("#espec-2").hidden = true;
         el[5].hidden = true;
         el[6].hidden = true;
 
         function func() {
-            var type = document.getElementsByName("type");
+            var type = document.getElementsByName("bebida");
 
             if (type[0].checked) {
                 alert("Vinho");
@@ -92,19 +99,21 @@
                 el[6].hidden = false;
                 t1.innerHTML = "Safra";
                 t2.innerHTML = "Tipo";
+                document.querySelector("#espec-1").hidden = false;
+                document.querySelector("#espec-2").hidden = false;
             } else if (type[1].checked) {
                 alert("Suco");
                 el[0].value = "Suco";
                 el[5].name = "sabor";
                 el[5].hidden = false;
-                el[6].hidden = false;
                 t1.innerHTML = "Sabor";
+                document.querySelector("#espec-1").hidden = false;
             } else if (type[2].checked) {
                 alert("Refrigerante");
                 el[0].value = "Refrigerante";
-                el[5].name = "retornavel";
                 el[5].hidden = false;
-                t1.innerHTML = "retornavel";
+                el[6].hidden = false;
+                t1.innerHTML = "Setor";
                 document.querySelector("#emp").hidden = false;
             }
         }
