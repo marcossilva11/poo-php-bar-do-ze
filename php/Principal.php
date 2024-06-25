@@ -25,35 +25,34 @@
         $v->setBebida($_POST['bebida']);
         $v->setNome($_POST['nome']);
         $v->setPreco($_POST['preco']);
-        $s->setPromo($_POST['promo']);
         $v->setSafra($_POST['safra']);
         $v->setTipo($_POST['tipo']);
         $v->MostrarBebida();
         if($_POST['preco'] < 25){
-            $v->setPromo[true];
+            $v->setPromo([false]);
         }
+        $v->VerificarPreco();
     } elseif ($_POST["bebida"] == "Suco") {
         $s->setBebida($_POST['bebida']);
         $s->setNome($_POST['nome']);
         $s->setPreco($_POST['preco']);
-        $s->setPromo($_POST['promo']);
         $s->setSabor($_POST['sabor']);
         $s->MostrarBebida();
-        if($_POST['preco'] < 25){
-            $v->setPromo[true];
-        }
-    } elseif ($_POST["bebida"] == "Refri") {
-        $s->setBebida($_POST['bebida']);
-        $s->setNome($_POST['nome']);
-        $s->setPreco($_POST['preco']);
-        $s->setPromo($_POST['promo']);
-        $r->setRetornavel(isset($_POST['retornavel']));
-        $r->MostrarBebida();
         if($_POST['preco'] < 2.5){
-            $v->setPromo[true];
+            $s->setPromo([false]);
         }
+        $s->VerificarPreco();
+    } elseif ($_POST["bebida"] == "Refrigerante") {
+        $r->setBebida($_POST['bebida']);
+        $r->setNome($_POST['nome']);
+        $r->setPreco($_POST['preco']);
+        $r->setRetornavel($_POST['retornavel']);
+        $r->MostrarBebida();
+        if($_POST['preco'] < 5){
+            $r->setPromo([false]);
+        }
+        $r->VerificarPreco();
     }
-
     ?>
 </pre>
 </body>

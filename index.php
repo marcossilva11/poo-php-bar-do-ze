@@ -61,10 +61,10 @@
                     </div>
 
                     <div id="emp">
-                        <p>Está Empregado?</p>
+                        <p>É retornável?</p>
                         <p>
-                            <input type="radio" name="empre" value="Sim" id="sim"><label for="sim">Sim</label>
-                            <input type="radio" name="empre" value="Não" id="nao"><label for="nao">Não</label>
+                            <input type="radio" name="retornavel" value="Sim" id="sim"><label for="sim">Sim</label>
+                            <input type="radio" name="retornavel" value="Não" id="nao"><label for="nao">Não</label>
                         </p>
                     </div>
                     <input type="submit" name="botao" value="Cadastrar">
@@ -84,8 +84,8 @@
         document.querySelector("#emp").hidden = true;
         document.querySelector("#espec-1").hidden = true;
         document.querySelector("#espec-2").hidden = true;
-        el[5].hidden = true;
-        el[6].hidden = true;
+        el[3].hidden = true;
+        el[4].hidden = true;
 
         function func() {
             var type = document.getElementsByName("bebida");
@@ -93,28 +93,38 @@
             if (type[0].checked) {
                 alert("Vinho");
                 el[0].value = "Vinho";
-                el[5].name = "safra";
-                el[6].name = "tipo";
-                el[5].hidden = false;
-                el[6].hidden = false;
+                el[3].name = "safra";
+                el[4].name = "tipo";
+                el[3].hidden = false;
+                el[4].hidden = false;
                 t1.innerHTML = "Safra";
                 t2.innerHTML = "Tipo";
                 document.querySelector("#espec-1").hidden = false;
                 document.querySelector("#espec-2").hidden = false;
+                document.querySelector("#emp").hidden = true;
+                document.querySelector("#t1").hidden = false;
+                document.querySelector("#t2").hidden = false;
             } else if (type[1].checked) {
                 alert("Suco");
                 el[0].value = "Suco";
-                el[5].name = "sabor";
-                el[5].hidden = false;
+                el[3].name = "sabor";
+                el[3].hidden = false;
+                el[4].hidden = true;
                 t1.innerHTML = "Sabor";
                 document.querySelector("#espec-1").hidden = false;
+                document.querySelector("#emp").hidden = true;
+                document.querySelector("#t1").hidden = false;
+                document.querySelector("#t2").hidden = true;
             } else if (type[2].checked) {
                 alert("Refrigerante");
                 el[0].value = "Refrigerante";
-                el[5].hidden = false;
-                el[6].hidden = false;
-                t1.innerHTML = "Setor";
+                el[3].hidden = true;
+                el[4].hidden = true;
                 document.querySelector("#emp").hidden = false;
+                document.querySelector("#espec-1").hidden = true;
+                document.querySelector("#espec-2").hidden = true;
+                document.querySelector("#t1").hidden = true;
+                document.querySelector("#t2").hidden = true;
             }
         }
     </script>
