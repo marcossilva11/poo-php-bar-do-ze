@@ -91,11 +91,11 @@ header {
   margin: 10px 0;
 }
 
-.container-main .form-input .selecao-bebidas .input-box, .container-main .form-input .selecao-bebidas .input-box-especializacao {
+.container-main .form-input .selecao-bebidas .input-box {
   margin: 10px 0;
 }
 
-.container-main .form-input .selecao-bebidas .input-box input, .container-main .form-input .selecao-bebidas .input-box-especializacao input {
+.container-main .form-input .selecao-bebidas .input-box input {
   display: none;
 }
 
@@ -121,54 +121,59 @@ header {
   background: linear-gradient(135deg, #fefcea 0%, #f1da36 100%);
 }
 
-.container-main .form-input .selecao-bebidas .input-box label{
-    cursor: pointer;
+.container-main .form-input .selecao-bebidas .input-box label {
+  cursor: pointer;
 }
 
-.container-main .form-input .cadastro-bebidas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
+.container-main .form-input .cadastro-bebidas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
 }
 
-.container-main .form-input .cadastro-bebidas .input-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
+.container-main .form-input .cadastro-bebidas .input-box,
+.container-main .form-input .cadastro-bebidas .input-box-espec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
 }
 
-.container-main .form-input .cadastro-bebidas .input-box input{
-    margin: 10px 0;
-    width: 75%;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.226);
-    outline: 0;
-    color: rgb(75, 75, 75);
+.container-main .form-input .cadastro-bebidas .input-box input,
+.container-main .form-input .cadastro-bebidas .input-box-espec input{
+  margin: 10px 0;
+  width: 75%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.226);
+  outline: 0;
+  color: rgb(75, 75, 75);
 }
 
-.container-main .form-input .cadastro-bebidas .input-box input:hover{
-    background-color: #feffaeb0;
+.container-main .form-input .cadastro-bebidas .input-box input:hover,
+.container-main .form-input .cadastro-bebidas .input-box-espec input:hover {
+  background-color: #feffaeb0;
 }
 
-.container-main .form-input .cadastro-bebidas .input-box input:focus{
-    background-color: #feffaeb0;
+.container-main .form-input .cadastro-bebidas .input-box input:focus,
+.container-main .form-input .cadastro-bebidas .input-box-espec input:focus {
+  background-color: #feffaeb0;
 }
 
-footer{
-    background-color: #576457d6;
-    width: 100%;
-    padding: 10px 0;
+footer {
+  background-color: #576457d6;
+  width: 100%;
+  padding: 10px 0;
 }
 
-footer p{
-    text-align: center;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
+footer p {
+  color: white;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
 }

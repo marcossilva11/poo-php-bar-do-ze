@@ -51,11 +51,11 @@
                         <input type="number" name="preco" id="preco">
                     </div>
                     <!--Especialização -->
-                    <div class="input-box-especializacao">
+                    <div class="input-box-espec">
                         <label id="t1"></label>
                         <input type="text" name="" id="espec-1">
                     </div>
-                    <div class="input-box-especializacao">
+                    <div class="input-box-espec">
                         <label id="t2"></label>
                         <input type="text" name="" id="espec-2">
                     </div>
@@ -67,7 +67,9 @@
                             <input type="radio" name="retornavel" value="Não" id="nao"><label for="nao">Não</label>
                         </p>
                     </div>
-                    <input type="submit" name="botao" value="Cadastrar">
+                    <div class="input-button">
+                        <input type="submit" name="botao" value="Cadastrar">
+                    </div>
             </div>
             </form>
         </div>
