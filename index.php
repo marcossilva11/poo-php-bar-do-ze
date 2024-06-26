@@ -14,14 +14,8 @@
 </head>
 
 <body>
-
-
     <div class="container-main">
-        <div class="header-box">
-            <header>
-                <h1>Bar do zé</h1>
-            </header>
-        </div>
+        <h1>Bar do zé</h1>
         <div class="form-input">
             <div class="selecao-bebidas">
                 <h2>Escolha sua bebida</h2>
@@ -61,11 +55,15 @@
                     </div>
 
                     <div id="emp">
-                        <p>É retornável?</p>
-                        <p>
-                            <input type="radio" name="retornavel" value="Sim" id="sim"><label for="sim">Sim</label>
-                            <input type="radio" name="retornavel" value="Não" id="nao"><label for="nao">Não</label>
-                        </p>
+                        <div class="emp-box">
+                            <h2>É retornável?</h2>
+                            <div class="input-box">
+                                <input type="radio" name="retornavel" value="Sim" id="sim"><label for="sim">Sim</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="radio" name="retornavel" value="Não" id="nao"><label for="nao">Não</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="input-button">
                         <input type="submit" name="botao" value="Cadastrar">

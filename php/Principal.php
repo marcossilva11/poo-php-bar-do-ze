@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herança bebida</title>
+    <!-- Link fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: Titulos;
+
+            src: url("fontes/Fifties\ Movies.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: rgb(170, 200, 167);
+            background: linear-gradient(187deg,
+                    rgba(170, 200, 167, 1) 0%,
+                    rgba(233, 255, 194, 1) 100%);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        pre{
+            font-family: "Raleway", sans-serif;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +59,7 @@
         $v->setSafra($_POST['safra']);
         $v->setTipo($_POST['tipo']);
         $v->MostrarBebida();
-        if($_POST['preco'] < 25){
+        if ($_POST['preco'] < 25) {
             $v->setPromo([false]);
         }
         $v->VerificarPreco();
@@ -38,7 +69,7 @@
         $s->setPreco($_POST['preco']);
         $s->setSabor($_POST['sabor']);
         $s->MostrarBebida();
-        if($_POST['preco'] < 2.5){
+        if ($_POST['preco'] < 2.5) {
             $s->setPromo([false]);
         }
         $s->VerificarPreco();
@@ -48,7 +79,7 @@
         $r->setPreco($_POST['preco']);
         $r->setRetornavel($_POST['retornavel']);
         $r->MostrarBebida();
-        if($_POST['preco'] < 5){
+        if ($_POST['preco'] < 5) {
             $r->setPromo([false]);
         }
         $r->VerificarPreco();
